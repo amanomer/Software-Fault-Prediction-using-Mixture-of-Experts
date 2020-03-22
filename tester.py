@@ -19,7 +19,7 @@ cwd = os.getcwd()
 
 #'Results' folder should be in same directory
 #Output will be stored in 'Results' folder in file like 'CM1_ME_DT.csv'
-outfile = open(cwd + "/Results/" + dataset_name + "_" + expert_model + "_" + agg_type +".csv" , "a+")
+outfile = open("Results/" + dataset_name + "_" + expert_model + "_" + agg_type +".csv" , "a+")
 
 #Sampling required
 sr = "yes"

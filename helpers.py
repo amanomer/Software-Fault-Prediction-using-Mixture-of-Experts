@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from sklearn.tree import DecisionTreeClassifier
 #from xgboost import XGBClassifier
 from imblearn.over_sampling import SMOTE
-from sklearn.preprocessing import StandardScaler,b normalize
+from sklearn.preprocessing import StandardScaler, normalize
 from sklearn.neural_network import MLPClassifier
 from sklearn.mixture import GaussianMixture
 from sklearn.ensemble import BaggingClassifier
