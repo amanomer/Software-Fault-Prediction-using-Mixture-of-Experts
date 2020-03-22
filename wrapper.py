@@ -1,6 +1,7 @@
 import os
 
 # import tester as test
+import time
 
 cwd = os.getcwd()
 
@@ -29,12 +30,14 @@ expert_model = ["MLP", "DT", "NB", "svm"]  # Base model
 # bag = Bagging
 # ME = Mixture of Experts
 agg_type = ["indi", "bag", "ME", "boost", "stack"]  # Aggregation/ensemble type
+log_file_name = time.strftime("%Y%m%d-%H%M%S")
+log_file = "logs\\" + log_file_name + ".log"
 
 for d in dataset_name:
     for e in expert_model:
         for a in agg_type:
             for t1 in list_LP:
                 for t2 in list_DS:
-                    cmd = 'python ' + cwd + '\\tester.py ' + d + ' ' + e + ' ' + a + ' ' + str(t1) + ' ' + str(t2)
+                    cmd = 'python ' + cwd + '\\tester.py ' + d + ' ' + e + ' ' + a + ' ' + str(t1) + ' ' + str(t2) + " > " + log_file
                     print(cmd)
                     os.system(cmd)
